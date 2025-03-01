@@ -1,0 +1,10 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "Typescript tutorial",
+  "main": "index.ts",
+  "scripts": {
+  },
+  "author": "Manav",
+  "license": "ISC"
+}
