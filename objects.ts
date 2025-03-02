@@ -15,14 +15,11 @@ values as the type defination , so it doesn't  allow to modify the type or add n
 
 
 // defining object with type
-const typedObj : {flag : boolean , num : number , age ?: number} = {
+const typedObj : {flag : boolean , num : number , age : number} = {
     flag : true,
     num : 56,
+    age : 12,
 };
-
-/*
-Note : When we define the object with explicit type , then by default all the properties are treated as compulsary . We have to provide the key value pair . But to make the property optional we can use ? . If the optional property is absent then no problem , if present then , it must statisfy it type.
-*/
 
 typedObj.age = 56;
 
@@ -38,5 +35,21 @@ function funcObj (person : {fname : string , flag : boolean}) {
 }
 
 funcObj({fname : "Hello" , flag : true});
+
+
+/*
+*****************************    readonly    ***************
+
+It is a keyword which is used to make the property or variable readonly preventing
+any modification.
+
+readonly can be used with arrays , objects , classes , interface , type.
+*/
+
+const readonlyobj : { readonly name : string,id : number} = {name : "hello" , id : 3}
+
+console.log(readonlyobj);
+readonlyobj.id = 34;
+// readonlyobj.name = "temp";       // This will give error as name property is readonly
 
 export {}       // Just to avoid redeclaration error , we will learn later about it
