@@ -10,4 +10,5 @@ Topics covered :
 - readonly and optional property of objects.
 - Function : Parameter types and return types.
 - Optional and Default paramters in function.
-- Array , Tuples and Enum in Typescript
+- Array , Tuples and Enum in Typescript.
+- Interfaces , interface vs type.

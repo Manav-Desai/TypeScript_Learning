@@ -24,3 +24,23 @@ const user : User = {
         return `Here is your cuppon : ${nameOfCuppon}`;
     }
 }
+
+// interface can be redeclared .
+interface if1 {
+    t : number,
+}
+
+interface if1 {
+    a : string,
+}
+
+// now if1 has both t and a property
+
+/*
+We can extend one or more interface , the final interface all the properties
+of extended interface , along with its custom defined if present
+*/
+
+interface temp extends if1 , User {
+    temp_t : number,
+}
