@@ -6,35 +6,36 @@ if we don't provide type , but give the value then it will be taken automaticall
 if we neither provide value nor type , then it will be of type = any , which means a variable can have data of any type. 
 */
 
-
-let greeting:string = "Hello";
+let greeting: string = "Hello";
 console.log(greeting);
 console.log(greeting.toLowerCase());
 
-let userId : number = 56.36;
+let userId: number = 56.36;
 console.log(userId);
 
-let flag:boolean = true;
+let flag: boolean = true;
 console.log(flag);
 
-let age = 34;       // age will be of type number
+let age = 34; // age will be of type number
 console.log(age);
 
-let fname = "Manav";    // fname will be of type string
+let fname = "Manav"; // fname will be of type string
 
 /*
 any : when we don't know what type of data do the variable contain in future.
 While declaration , if we don't provide any value or type , then it is inferred as any
 */
 
-let hero;   // hero is of type any same as --> let hero : any;
+let hero; // hero is of type any same as --> let hero : any;
 
-function greet(){
-    return "Hello";
+function greet() {
+  return "Hello";
 }
 
 hero = greet(); // hero is of type any
-console.log("Function return : ",hero);
+console.log("Function return : ", hero);
 
 hero = 36.58;
-console.log("Number hero : ",hero);
+console.log("Number hero : ", hero);
+
+export {};

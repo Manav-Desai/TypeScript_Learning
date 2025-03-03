@@ -17,3 +17,5 @@ let obj : union;
 obj = {name : "hello"};     // obj has property of HasName
 obj = {age : 3};            // obj has property of HasAge
 obj = {name : "hello" , age : 3};   // obj has both HasName and HasAge propery
+
+export {};

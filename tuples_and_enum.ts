@@ -3,7 +3,7 @@ Tuples in typescript are basically a fixed size array , in which the type of ele
 at particular position is well defined.
 */
 
-let tuple : [string , number] = ["hello" , 1];
+let tuple: [string, number] = ["hello", 1];
 
 tuple[0] = "Hello";
 tuple[1] = 1;
@@ -16,7 +16,7 @@ and there is no type checking is performed which makes it risky.
 */
 
 tuple.pop();
-tuple.push("Hello");  // at index = 1 , it will be string and it violates our type
+tuple.push("Hello"); // at index = 1 , it will be string and it violates our type
 
 console.log(tuple);
 
@@ -32,10 +32,10 @@ and for subsequent keys , if not provided = previous key + 1 , for numeric only
 */
 
 enum Directions {
-    up = "UP",
-    down = 1,
-    left,
-    right,
+  up = "UP",
+  down = 1,
+  left,
+  right,
 }
 
 // Both are valid and result to same value.
@@ -44,22 +44,23 @@ let down = Directions.down;
 let left = Directions.left;
 let right = Directions.right;
 
-console.log(up,down,left,right);
+console.log(up, down, left, right);
 
 up = Directions["up"];
 down = Directions["down"];
 left = Directions["left"];
 right = Directions["right"];
 
-console.log(up,down,left,right);
+console.log(up, down, left, right);
 
-// Normal enum are bidirectional : It means we can access value using key and key using value
+// Normal enum are bidirectional : It means we can access value using key and key using value , but this
+// only valid for numeric property of enums not for string property of enum
 
-let key = Directions["UP"];
-console.log("Key using UP value : " , key);
+// let key = Directions["UP"];  // This will give an error as string property of enum are not bidirectional
+// console.log("Key using UP value : " , key);
 
-key = Directions["1"];
-console.log("Key using 1 value : " , key);
+let key = Directions["1"];
+console.log("Key using 1 value : ", key);
 
 /*
 Note : Enum are converted to JS using IIFE and objects and values are evaluated at
@@ -69,14 +70,14 @@ and its value is calculated at compile time and no IIFE code is generated.
 But , const enum are unidirectional it means we can only access values using keys.
 */
 
-const enum uniDirectional { 
-    up = "UP",
-    down = 1,
-    left,
-    right
+const enum uniDirectional {
+  up = "UP",
+  down = 1,
+  left,
+  right,
 }
 
 console.log(uniDirectional.up);
 // console.log(uniDirectional["UP"]);    // Not allowed to access key using value
 
-export {}
+export {};

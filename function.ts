@@ -57,3 +57,5 @@ arr.map( (x) => x+2 );      // here type of x will be number , we don't have to 
 function handleError() : never {
     throw new Error("Inside handleError of function.ts file");
 }
+
+export {};
