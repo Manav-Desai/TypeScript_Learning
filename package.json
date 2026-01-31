@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "Typescript tutorial",
   "main": "index.ts",
-  "scripts": {
-  },
+  "type": "module",
+  "scripts": {},
   "author": "Manav",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/luxon": "^3.7.1",
+    "luxon": "^3.7.2"
+  }
 }
